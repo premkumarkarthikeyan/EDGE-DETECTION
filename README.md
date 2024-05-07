@@ -1,10 +1,8 @@
-# EX-6 EDGE-DETECTION
+# EDGE-DETECTION
 ## Aim:
 To perform edge detection using Sobel, Laplacian, and Canny edge detectors.
-
 ## Software Required:
 Anaconda - Python 3.7
-
 ## Algorithm:
 ### Step1:
 Import all the necessary modules for the program.
@@ -17,21 +15,18 @@ Using Sobel operator from cv2,detect the edges of the image.
 ### Step5:
 Using Laplacian operator from cv2,detect the edges of the image and Using Canny operator from cv2,detect the edges of the image.
 ## PROGRAM:
-```
-DEVELOPED BY: PREM KUMAR K
-REGISTER NUMBER: 212222230111
-```
+## DEVELOPED BY:PREM KUMAR K
+## REGISTER NUMBER: 212222230111
 ## IMPORT PACKAGES AND LOAD IMAGES
   ```python
-import cv2
-import matplotlib.pyplot as plt
-
-img=cv2.imread("eagle.jpeg",0)
-gray=cv2.cvtColor(img,cv2.COLOR_GRAY2RGB)
-gray = cv2.GaussianBlur(gray,(3,3),0)
+  canny=cv2.Canny(gray,120,150)
+plt.imshow(canny,cmap='gray')
+plt.title("Canny Edge Detector")
+plt.axis("off")
+plt.show()
 ```
 ## SOBEL EDGE DETECTOR:
-**SOBEL X:**
+## SOBEL X:
   ```python
   sobelx = cv2.Sobel(gray,cv2.CV_64F,1,0,ksize=5)
 plt.imshow(sobelx,cmap='gray')
@@ -39,7 +34,7 @@ plt.title("Sobel X axis")
 plt.axis("off")
 plt.show()
 ```
-**SOBEL Y:**
+## SOBEL Y:
 ```python
 sobely = cv2.Sobel(gray,cv2.CV_64F,0,1,ksize=5)
 plt.imshow(sobely,cmap='gray')
@@ -47,7 +42,7 @@ plt.title("Sobel Y axis")
 plt.axis("off")
 plt.show()
 ```
-**SOBEL XY:**
+## SOBEL XY:
   ```python
   sobelxy = cv2.Sobel(gray,cv2.CV_64F,1,1,ksize=5)
 plt.imshow(sobelxy,cmap='gray')
@@ -73,23 +68,14 @@ plt.show()
 ```
 ## Output:
 ## ORIGINAL IMAGE:
-
-![samurai](https://github.com/DINESH18032004/EDGE-DETECTION/assets/119477784/153921be-d89b-4248-87fc-2ee1e2dba4ca)
-
+![image](https://github.com/gpavana/EDGE-DETECTION/assets/118787343/f28799ff-7f73-4e6d-9466-fa2042fdfcba)
 ### SOBEL EDGE DETECTOR:
-![Screenshot 2024-04-02 114529](https://github.com/DINESH18032004/EDGE-DETECTION/assets/119477784/1c121c40-51f5-413c-81aa-c17661196160)
-
-![Screenshot 2024-04-02 114543](https://github.com/DINESH18032004/EDGE-DETECTION/assets/119477784/2b7cb9ca-7db2-43b5-ae34-4c594a8ca331)
-
-![Screenshot 2024-04-02 114553](https://github.com/DINESH18032004/EDGE-DETECTION/assets/119477784/89e7aef1-6752-4a7e-9161-af85442b05af)
-
+![image](https://github.com/gpavana/EDGE-DETECTION/assets/118787343/bc8ed57e-5cf2-4833-b6d9-ea59d10e34f0)
+![image](https://github.com/gpavana/EDGE-DETECTION/assets/118787343/86a92b10-0e69-4e0b-aadd-d734815522fa)
+![image](https://github.com/gpavana/EDGE-DETECTION/assets/118787343/e0aaa41b-b4a4-4e66-8f1e-5d2e425435fd)
 ### LAPLACIAN EDGE DETECTOR
-
-![Screenshot 2024-04-02 114603](https://github.com/DINESH18032004/EDGE-DETECTION/assets/119477784/a70b62da-331d-4ad1-84ff-56a8895fd6b4)
-
+![image](https://github.com/gpavana/EDGE-DETECTION/assets/118787343/18b00b2d-dd9b-4cd9-9c1f-783a0c7ba616)
 ### CANNY EDGE DETECTOR
-
-![Screenshot 2024-04-02 114612](https://github.com/DINESH18032004/EDGE-DETECTION/assets/119477784/3c0126ea-800e-4922-a52e-e698564b8a37)
-
+![image](https://github.com/gpavana/EDGE-DETECTION/assets/118787343/89255595-bc54-4582-8e30-be96f21d6e74)
 ## Result:
 Thus the edges are detected using Sobel, Laplacian, and Canny edge detectors.
